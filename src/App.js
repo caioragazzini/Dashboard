@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React, { useState, useEffect } from 'react';
+import Dashboard from './components/Dashboard/Dashboard'; // Corrigir o caminho do componente Dashboard
+import jobApi from './api/jobApi'; // Corrigir o caminho do arquivo jobApi
 
 function App() {
+  const [jobsData, setJobsData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await jobApi.getJobs();
+        setJobsData(data);
+      } catch (error) {
+        console.error('Erro ao obter dados da API:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Dashboard data={jobsData} />
     </div>
   );
 }

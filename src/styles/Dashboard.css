@@ -1,0 +1,20 @@
+/* src/styles/Dashboard.css */
+
+.dashboard-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Adiciona o alinhamento centralizado */
+  }
+  
+  .dashboard-title {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: #333;
+    text-align: center; /* Adiciona o alinhamento centralizado */
+  }
+  

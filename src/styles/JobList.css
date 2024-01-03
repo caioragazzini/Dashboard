@@ -1,0 +1,35 @@
+
+.job-list-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .job-item {
+    flex: 1 0 calc(33.33% - 20px); /* Distribuir os itens em 3 colunas */
+    margin: 10px;
+    background-color: #fff; /* Cor de fundo padrão */
+    border: 1px solid #ddd; /* Borda para destacar os itens */
+    border-radius: 8px;
+    padding: 12px;
+  }
+  
+  .job-item p {
+    margin: 8px 0; /* Margem entre os parágrafos dentro de job-item */
+   
+  }
+  
+  .job-item p.title {
+    color: #080808; /* Cor azul para destacar o título "Nome do Servidor" */
+  }
+  
+  .job-item-red {
+    background-color: #ffcccc; /* Cor de fundo vermelha para percentual acima de 10% */
+  }
+  
+  .job-item-yellow {
+    background-color: #fff3cd; /* Cor de fundo amarela para percentual entre 5% e 9% */
+  }
+  
+  .job-item-green {
+    background-color: #d4edda; /* Cor de fundo verde para percentual abaixo de 5% */
+  }
