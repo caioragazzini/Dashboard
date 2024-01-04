@@ -1,7 +1,9 @@
-// App.js
+// src/App.js
 import React, { useState, useEffect } from 'react';
-import Dashboard from './components/Dashboard/Dashboard'; // Corrigir o caminho do componente Dashboard
-import jobApi from './api/jobApi'; // Corrigir o caminho do arquivo jobApi
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Dashboard from './components/Dashboard/Dashboard';
+import DescricaoProcessoPage from './components/ClasseProcesso/DescricaoProcessoPage';
+import jobApi from './api/jobApi';
 
 function App() {
   const [jobsData, setJobsData] = useState(null);
@@ -20,9 +22,14 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <Dashboard data={jobsData} />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Dashboard data={jobsData} />} />
+          <Route path="/DescricaoProcessoPage/:nomeDoServidor" element={<DescricaoProcessoPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
