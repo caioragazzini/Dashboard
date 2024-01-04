@@ -14,7 +14,7 @@ const getJobItemColorClass = (percentual) => {
 };
 
 const JobList = ({ jobData }) => {
-  const [setSelectedJob] = useState(null);
+  const [selectedJob, setSelectedJob] = useState(null);
   const navigate = useNavigate();  
 
   const handleJobClick = (job) => {
