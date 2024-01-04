@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import JobList from '../JobList/JobList';
 import '../../styles/Dashboard.css';
+import jobApi from '../../api/jobApi';
 
 
 const Dashboard = () => {
@@ -10,8 +11,8 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://localhost:44359/Job/GetAllJobs');
-        const data = await response.json();
+      
+        const data = await jobApi.getJobs();
         setJobData(data);
       } catch (error) {
         console.error('Erro ao obter dados da API:', error);

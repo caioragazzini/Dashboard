@@ -14,14 +14,14 @@ const getJobItemColorClass = (percentual) => {
 };
 
 const JobList = ({ jobData }) => {
-  const [selectedJob, setSelectedJob] = useState(null);
-  const navigate = useNavigate();  // Inicialize o hook useNavigate
+  const [setSelectedJob] = useState(null);
+  const navigate = useNavigate();  
 
   const handleJobClick = (job) => {
-    // Defina o job selecionado
+ 
     setSelectedJob(job);
 
-    // Redirecione para a página DescricaoProcessoPage com o parâmetro nomeDoServidor
+   
     navigate(`/DescricaoProcessoPage/${job.nomeDoServidor}`);
   };
 

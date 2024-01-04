@@ -5,21 +5,21 @@
   }
   
   .job-item {
-    flex: 1 0 calc(33.33% - 20px); /* Distribuir os itens em 3 colunas */
+    flex: 1 0 calc(33.33% - 20px);
     margin: 10px;
-    background-color: #fff; /* Cor de fundo padrão */
-    border: 1px solid #ddd; /* Borda para destacar os itens */
+    background-color: #fff; 
+    border: 1px solid #ddd; 
     border-radius: 8px;
     padding: 12px;
   }
   
   .job-item p {
-    margin: 8px 0; /* Margem entre os parágrafos dentro de job-item */
+    margin: 8px 0; 
    
   }
   
   .job-item p.title {
-    color: #080808; /* Cor azul para destacar o título "Nome do Servidor" */
+    color: #080808; 
   }
   
   .job-item-red {

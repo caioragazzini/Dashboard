@@ -1,6 +1,6 @@
 // services/jobService.js
 const calculateChartData = (data) => {
-    // Implemente a lógica de processamento de dados aqui, se necessário
+ 
     return {
       labels: data.map((item) => item.NOMEDOSERVIDOR),
       datasets: [
