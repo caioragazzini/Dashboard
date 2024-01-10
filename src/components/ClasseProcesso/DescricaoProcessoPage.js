@@ -25,16 +25,38 @@ const DescricaoProcessoPage = () => {
 
   return (
     <div className="container">
-    <h1>Resultado para o servidor: {nomeDoServidor}</h1>
-    <ul>
-  {data.map((item, index) => (
-    <li key={index}>
-      <p><strong>Classe de Processo:</strong> {item.classeProcesso}</p>
-      <p><strong>Quantidade de Registros:</strong> {item.quantidadeRegistros}</p>
-    </li>
-  ))}
-</ul>
-  </div>
+      <h1>Resultado para o servidor: {nomeDoServidor}</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Agendamento</th>
+            <th>Classe de Processo</th>
+            <th>Nome do Servidor</th>
+            <th>ID do Job</th>
+            <th>Código da Coligada</th>
+            <th>Nome</th>
+            <th>Data de Início da Execução</th>
+            <th>ID do Processo</th>
+            <th>Tempo de Execução (minutos)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((item, index) => (
+            <tr key={index}>
+              <td>{item.agendamento}</td>
+              <td>{item.classeProcesso}</td>
+              <td>{item.nomeDoServidor}</td>
+              <td>{item.idJob}</td>
+              <td>{item.codColigada}</td>
+              <td>{item.nome}</td>
+              <td>{item.dataIniExec}</td>
+              <td>{item.processId}</td>
+              <td>{item.tempoExecucaoMin}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 

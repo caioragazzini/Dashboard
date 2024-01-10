@@ -34,8 +34,9 @@ const JobList = ({ jobData }) => {
           onClick={() => handleJobClick(job)}
         >
           <p className="title"><strong>Nome do Servidor:</strong> {job.nomeDoServidor}</p>
-          <p className="title"><strong>Total de Jobs:</strong> {job.totalDeJobs}</p>
-          <p className="title"><strong>Total de Jobs por Servidor:</strong> {job.totalDeJobsPorServidor}</p>
+          <p className="title"><strong>Max Jobs:</strong> {job.maxJobs}</p>
+          <p className="title"><strong>Full Jobs:</strong> {job.fullJobs}</p>   
+          <p className="title"><strong>Total De Jobs Por Servidor:</strong> {job.totalDeJobsPorServidor}</p>             
           <p className="title"><strong>Percentual:</strong> {job.percentual}%</p>
         </button>
       ))}
