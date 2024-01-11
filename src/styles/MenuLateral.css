@@ -1,0 +1,28 @@
+/* No arquivo components/MenuLateral/MenuLateral.css */
+.sidebar {
+    width: 300px;
+    height: 100vh; /* Altura proporcional à altura da tela */
+    background-color: #ff69b4; /* Cor rosa, você pode ajustar conforme necessário */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinhe os itens à esquerda */
+    justify-content: flex-start; /* Alinhe os itens no topo */
+    color: #fff; /* Cor do texto, você pode ajustar conforme necessário */
+  }
+  
+  .sidebar h2 {
+    margin-bottom: 20px;
+  }
+  
+  .sidebar p {
+    margin: 10px 0;
+  }
+  
+  .sidebar-table {
+    width: 100%; /* Faça a tabela ocupar 100% da largura da sidebar */
+  }
+  
+  /* Adicione mais regras conforme necessário para ajustar o layout */
+  
