@@ -37,7 +37,7 @@ const MenuLateral = () => {
       <table className="sidebar-table">
         <tbody>
           <tr>
-            <td>Servidores Suportados:</td>
+            <td>Total de Jobs Suportados:</td>
             <td>{menuData.suportadoServidores}</td>
           </tr>
           <tr>
