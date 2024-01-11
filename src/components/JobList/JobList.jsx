@@ -1,7 +1,9 @@
 // src/components/JobList/JobList.js
 import React, { useState } from 'react';
-import '../../styles/JobList.css'; // Importe o arquivo de estilos
+import '../../styles/JobList.css';
 import { useNavigate } from 'react-router-dom';
+
+
 
 const getJobItemColorClass = (percentual) => {
   if (percentual >= 10) {
@@ -15,13 +17,10 @@ const getJobItemColorClass = (percentual) => {
 
 const JobList = ({ jobData }) => {
   const [selectedJob, setSelectedJob] = useState(null);
-  const navigate = useNavigate();  
+  const navigate = useNavigate();
 
   const handleJobClick = (job) => {
- 
     setSelectedJob(job);
-
-   
     navigate(`/DescricaoProcessoPage/${job.nomeDoServidor}`);
   };
 
@@ -35,8 +34,8 @@ const JobList = ({ jobData }) => {
         >
           <p className="title"><strong>Nome do Servidor:</strong> {job.nomeDoServidor}</p>
           <p className="title"><strong>Max Jobs:</strong> {job.maxJobs}</p>
-          <p className="title"><strong>Full Jobs:</strong> {job.fullJobs}</p>   
-          <p className="title"><strong>Total De Jobs Por Servidor:</strong> {job.totalDeJobsPorServidor}</p>             
+          <p className="title"><strong>Full Jobs:</strong> {job.fullJobs}</p>
+          <p className="title"><strong>Total De Jobs Por Servidor:</strong> {job.totalDeJobsPorServidor}</p>
           <p className="title"><strong>Percentual:</strong> {job.percentual}%</p>
         </button>
       ))}
