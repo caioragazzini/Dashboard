@@ -15,17 +15,17 @@ const MenuLateral = () => {
   };
 
   useEffect(() => {
-    // Chama fetchData imediatamente ao montar o componente
+    
     fetchData();
 
-    // Configura um intervalo para chamar fetchData a cada 10 segundos
+   
     const intervalId = setInterval(() => {
       fetchData();
     }, 5 * 1000);
 
-    // Limpa o intervalo quando o componente é desmontado
+    
     return () => clearInterval(intervalId);
-  }, []); // O segundo argumento vazio garante que o efeito só seja executado ao montar e desmontar o componente
+  }, []); 
 
   useEffect(() => {
     console.log("MenuLateral atualizado:", menuData);
